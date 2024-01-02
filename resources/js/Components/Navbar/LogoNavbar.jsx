@@ -10,7 +10,7 @@ const LogoNavbar = ({ logoImage }) => {
                 className="w-8 rounded-full"
             />
             <p className="font-bricolage text-xl font-extrabold text-slate-800">
-                GoFood
+                Savora
             </p>
         </a>
     );

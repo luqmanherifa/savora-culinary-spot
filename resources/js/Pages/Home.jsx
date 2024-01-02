@@ -1,3 +1,4 @@
+import Hero from "@/Layouts/Hero";
 import Navbar from "@/Layouts/Navbar";
 import { Head } from "@inertiajs/react";
 import React from "react";
@@ -7,7 +8,7 @@ const Home = ({ auth }) => {
         <>
             <Head title="Home" />
             <Navbar auth={auth} />
-            <div className="underline text-blue-600">Home</div>
+            <Hero />
         </>
     );
 };
