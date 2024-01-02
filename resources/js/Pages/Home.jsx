@@ -2,11 +2,11 @@ import Navbar from "@/Layouts/Navbar";
 import { Head } from "@inertiajs/react";
 import React from "react";
 
-const Home = () => {
+const Home = ({ auth }) => {
     return (
         <>
             <Head title="Home" />
-            <Navbar />
+            <Navbar auth={auth} />
             <div className="underline text-blue-600">Home</div>
         </>
     );
