@@ -4,13 +4,13 @@ const Button = ({
     link,
     target,
     text,
-    color = "text-btntext bg-btnbg hover:bg-btnhover",
+    color = "text-darkgreen bg-lightgreen hover:bg-lightgreenhover",
 }) => {
     return (
         <a
             href={link}
             target={target}
-            className={`inline-flex items-center rounded-lg px-3 py-2 text-center font-bricolage text-sm font-medium ${color}`}
+            className={`inline-flex items-center rounded-2xl px-5 py-2 text-center text-sm font-medium ${color}`}
         >
             {text}
         </a>

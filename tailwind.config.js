@@ -12,12 +12,13 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+                sans: ["Bricolage Grotesque", ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                btntext: "#00880d",
-                btnbg: "#eaffea",
-                btnhover: "#d3ffd3",
+                darkgreen: "#00880d",
+                darkgreenhover: "#269a31",
+                lightgreen: "#eaffea",
+                lightgreenhover: "#d3ffd3",
             },
         },
     },
