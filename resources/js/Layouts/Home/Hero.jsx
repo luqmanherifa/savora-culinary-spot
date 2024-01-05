@@ -3,10 +3,10 @@ import hero from "../../../../public/images/hero.jpg";
 
 const Hero = () => {
     return (
-        <div className="max-w-7xl mx-auto mt-3 relative">
+        <div className="relative mx-auto mt-3 max-w-7xl">
             <img src={hero} alt="" />
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                <div className="flex justify-center mb-3">
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center text-white">
+                <div className="mb-3 flex justify-center">
                     <svg
                         viewBox="0 0 100 100"
                         fill="none"
@@ -28,15 +28,15 @@ const Hero = () => {
                         ></path>
                     </svg>
                 </div>
-                <h3 className="text-3xl font-semibold mb-3 text-white">
+                <h3 className="mb-3 text-3xl font-semibold text-white">
                     Hungry? Just Savora it!
                 </h3>
-                <p className="w-[30rem] font-light text-base text-white mb-6">
+                <p className="mb-6 w-[30rem] text-base font-light text-white">
                     Order your favorite meals here, on our web. As smooth as in
                     the app. Same fast delivery. Countless restos to try.
                 </p>
-                <div className="p-5 bg-white rounded-2xl">
-                    <div className="flex justify-start mb-2">
+                <div className="rounded-2xl bg-white p-5">
+                    <div className="mb-2 flex justify-start">
                         <p className="text-sm font-medium text-gray-800">
                             Your location
                         </p>
@@ -47,9 +47,9 @@ const Hero = () => {
                                 Search
                             </label>
                             <div className="relative w-full">
-                                <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3">
                                     <svg
-                                        className="w-4 h-4 text-gray-500"
+                                        className="h-4 w-4 text-gray-500"
                                         xmlns="http://www.w3.org/2000/svg"
                                         height="16"
                                         width="10"
@@ -62,14 +62,14 @@ const Hero = () => {
                                 <input
                                     type="text"
                                     id="voice-search"
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full block w-full ps-10 p-2.5"
+                                    className="block w-full rounded-full border border-gray-300 bg-gray-50 p-2.5 ps-10 text-sm text-gray-900"
                                     placeholder="Search location..."
                                     required
                                 />
                             </div>
                             <button
                                 type="submit"
-                                className="inline-flex items-center py-2.5 px-4 ms-2 text-sm font-medium text-white bg-darkgreen rounded-full hover:bg-darkgreenhover"
+                                className="ms-2 inline-flex items-center rounded-full bg-darkgreen px-4 py-2.5 text-sm font-medium text-white hover:bg-darkgreenhover"
                             >
                                 Explore
                             </button>

@@ -9,26 +9,26 @@ import tfHours from "../../../../public/images/tfhours.png";
 const Categories = () => {
     return (
         <div className="flex justify-center">
-            <div className="max-w-7xl mx-auto mt-10">
-                <h3 className="flex justify-center mb-4 text-2xl font-semibold text-gray-800">
+            <div className="mx-auto mt-10 max-w-7xl">
+                <h3 className="mb-4 flex justify-center text-2xl font-semibold text-gray-800">
                     Looking for inspo? Start here
                 </h3>
                 <div className="flex gap-5">
                     <a
                         href="/nearme"
-                        className="p-6 pt-4 bg-white border border-gray-300 rounded-2xl hover:bg-lightgreen"
+                        className="rounded-2xl border border-gray-300 bg-white p-6 pt-4 hover:bg-lightgreen"
                     >
-                        <img className="w-28 mx-auto" src={nearMe} alt="" />
+                        <img className="mx-auto w-28" src={nearMe} alt="" />
                         <p className="flex justify-center text-sm font-medium text-gray-800">
                             Near me
                         </p>
                     </a>
                     <a
                         href="/bestsellers"
-                        className="p-6 pt-4 bg-white border border-gray-300 rounded-2xl hover:bg-lightgreen"
+                        className="rounded-2xl border border-gray-300 bg-white p-6 pt-4 hover:bg-lightgreen"
                     >
                         <img
-                            className="w-28 mx-auto"
+                            className="mx-auto w-28"
                             src={bestSellers}
                             alt=""
                         />
@@ -38,37 +38,37 @@ const Categories = () => {
                     </a>
                     <a
                         href="/budgetmeal"
-                        className="p-6 pt-4 bg-white border border-gray-300 rounded-2xl hover:bg-lightgreen"
+                        className="rounded-2xl border border-gray-300 bg-white p-6 pt-4 hover:bg-lightgreen"
                     >
-                        <img className="w-28 mx-auto" src={budgetMeal} alt="" />
+                        <img className="mx-auto w-28" src={budgetMeal} alt="" />
                         <p className="flex justify-center text-sm font-medium text-gray-800">
                             Budget meal
                         </p>
                     </a>
                     <a
                         href="/mostloved"
-                        className="p-6 pt-4 bg-white border border-gray-300 rounded-2xl hover:bg-lightgreen"
+                        className="rounded-2xl border border-gray-300 bg-white p-6 pt-4 hover:bg-lightgreen"
                     >
-                        <img className="w-28 mx-auto" src={mostLoved} alt="" />
+                        <img className="mx-auto w-28" src={mostLoved} alt="" />
                         <p className="flex justify-center text-sm font-medium text-gray-800">
                             Most loved
                         </p>
                     </a>
                     <a
                         href="/tfHours"
-                        className="p-6 pt-4 bg-white border border-gray-300 rounded-2xl hover:bg-lightgreen"
+                        className="rounded-2xl border border-gray-300 bg-white p-6 pt-4 hover:bg-lightgreen"
                     >
-                        <img className="w-28 mx-auto" src={tfHours} alt="" />
+                        <img className="mx-auto w-28" src={tfHours} alt="" />
                         <p className="flex justify-center text-sm font-medium text-gray-800">
                             24 hours
                         </p>
                     </a>
                     <a
                         href="/healthyfood"
-                        className="p-6 pt-4 bg-white border border-gray-300 rounded-2xl hover:bg-lightgreen"
+                        className="rounded-2xl border border-gray-300 bg-white p-6 pt-4 hover:bg-lightgreen"
                     >
                         <img
-                            className="w-28 mx-auto"
+                            className="mx-auto w-28"
                             src={healthyFood}
                             alt=""
                         />
