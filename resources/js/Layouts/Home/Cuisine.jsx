@@ -16,14 +16,14 @@ import western from "../../../../public/images/western.jpg";
 const Cuisine = () => {
     return (
         <div className="flex justify-center">
-            <div className="mx-auto mt-12 max-w-7xl">
+            <div className="mx-auto mt-16 max-w-7xl">
                 <h3 className="mb-7 flex justify-center text-2xl font-semibold text-gray-800">
                     Choose from cuisines
                 </h3>
-                <div className="mb-10 flex gap-10">
-                    <a href="/coffee" className="rounded-2xl bg-white">
+                <div className="flex max-w-[67rem] flex-wrap gap-[1.4rem]">
+                    <a href="/coffee">
                         <img
-                            className="mx-auto mb-5 w-36 rounded-full"
+                            className="mx-auto mb-4 w-40 rounded-full"
                             src={coffee}
                             alt=""
                         />
@@ -31,9 +31,9 @@ const Cuisine = () => {
                             Coffee
                         </p>
                     </a>
-                    <a href="/martabak" className="rounded-2xl bg-white">
+                    <a href="/martabak">
                         <img
-                            className="mx-auto mb-5 w-36 rounded-full"
+                            className="mx-auto mb-4 w-40 rounded-full"
                             src={martabak}
                             alt=""
                         />
@@ -41,9 +41,9 @@ const Cuisine = () => {
                             Martabak
                         </p>
                     </a>
-                    <a href="/baksosoto" className="rounded-2xl bg-white">
+                    <a href="/baksosoto">
                         <img
-                            className="mx-auto mb-5 w-36 rounded-full"
+                            className="mx-auto mb-4 w-40 rounded-full"
                             src={baksosoto}
                             alt=""
                         />
@@ -51,9 +51,9 @@ const Cuisine = () => {
                             Bakso & soto
                         </p>
                     </a>
-                    <a href="/snacks" className="rounded-2xl bg-white">
+                    <a href="/snacks">
                         <img
-                            className="mx-auto mb-5 w-36 rounded-full"
+                            className="mx-auto mb-4 w-40 rounded-full"
                             src={snacks}
                             alt=""
                         />
@@ -61,9 +61,9 @@ const Cuisine = () => {
                             Snacks
                         </p>
                     </a>
-                    <a href="/bakery" className="rounded-2xl bg-white">
+                    <a href="/bakery">
                         <img
-                            className="mx-auto mb-5 w-36 rounded-full"
+                            className="mx-auto mb-4 w-40 rounded-full"
                             src={bakery}
                             alt=""
                         />
@@ -71,9 +71,9 @@ const Cuisine = () => {
                             Bakery
                         </p>
                     </a>
-                    <a href="/beverages" className="rounded-2xl bg-white">
+                    <a href="/beverages">
                         <img
-                            className="mx-auto mb-5 w-36 rounded-full"
+                            className="mx-auto mb-4 w-40 rounded-full"
                             src={beverages}
                             alt=""
                         />
@@ -81,11 +81,9 @@ const Cuisine = () => {
                             Beverages
                         </p>
                     </a>
-                </div>
-                <div className="flex gap-10">
-                    <a href="/noodles" className="rounded-2xl bg-white">
+                    <a href="/noodles">
                         <img
-                            className="mx-auto mb-5 w-36 rounded-full"
+                            className="mx-auto mb-4 w-40 rounded-full"
                             src={noodles}
                             alt=""
                         />
@@ -93,9 +91,9 @@ const Cuisine = () => {
                             Noodles
                         </p>
                     </a>
-                    <a href="/seafood" className="rounded-2xl bg-white">
+                    <a href="/seafood">
                         <img
-                            className="mx-auto mb-5 w-36 rounded-full"
+                            className="mx-auto mb-4 w-40 rounded-full"
                             src={seafood}
                             alt=""
                         />
@@ -103,9 +101,9 @@ const Cuisine = () => {
                             Seafood
                         </p>
                     </a>
-                    <a href="/fastfood" className="rounded-2xl bg-white">
+                    <a href="/fastfood">
                         <img
-                            className="mx-auto mb-5 w-36 rounded-full"
+                            className="mx-auto mb-4 w-40 rounded-full"
                             src={fastfood}
                             alt=""
                         />
@@ -113,9 +111,9 @@ const Cuisine = () => {
                             Fast food
                         </p>
                     </a>
-                    <a href="/korean" className="rounded-2xl bg-white">
+                    <a href="/korean">
                         <img
-                            className="mx-auto mb-5 w-36 rounded-full"
+                            className="mx-auto mb-4 w-40 rounded-full"
                             src={korean}
                             alt=""
                         />
@@ -123,9 +121,9 @@ const Cuisine = () => {
                             Korean
                         </p>
                     </a>
-                    <a href="/western" className="rounded-2xl bg-white">
+                    <a href="/western">
                         <img
-                            className="mx-auto mb-5 w-36 rounded-full"
+                            className="mx-auto mb-4 w-40 rounded-full"
                             src={western}
                             alt=""
                         />
@@ -133,9 +131,9 @@ const Cuisine = () => {
                             Western
                         </p>
                     </a>
-                    <a href="/pizzapasta" className="rounded-2xl bg-white">
+                    <a href="/pizzapasta">
                         <img
-                            className="mx-auto mb-5 w-36 rounded-full"
+                            className="mx-auto mb-4 w-40 rounded-full"
                             src={pizzapasta}
                             alt=""
                         />

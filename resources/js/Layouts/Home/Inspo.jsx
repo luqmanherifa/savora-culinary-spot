@@ -9,11 +9,11 @@ import tfHours from "../../../../public/images/tfhours.png";
 const Inspo = () => {
     return (
         <div className="flex justify-center">
-            <div className="mx-auto mt-12 max-w-7xl">
+            <div className="mx-auto mt-16 max-w-7xl">
                 <h3 className="mb-7 flex justify-center text-2xl font-semibold text-gray-800">
                     Looking for inspo? Start here
                 </h3>
-                <div className="flex gap-5">
+                <div className="flex max-w-[67rem] flex-wrap gap-5">
                     <a
                         href="/nearme"
                         className="rounded-2xl border border-gray-300 bg-white p-6 pt-4 hover:bg-lightgreen"
