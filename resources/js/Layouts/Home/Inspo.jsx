@@ -6,11 +6,11 @@ import mostLoved from "../../../../public/images/mostloved.png";
 import nearMe from "../../../../public/images/nearme.png";
 import tfHours from "../../../../public/images/tfhours.png";
 
-const Categories = () => {
+const Inspo = () => {
     return (
         <div className="flex justify-center">
-            <div className="mx-auto mt-10 max-w-7xl">
-                <h3 className="mb-4 flex justify-center text-2xl font-semibold text-gray-800">
+            <div className="mx-auto mt-12 max-w-7xl">
+                <h3 className="mb-7 flex justify-center text-2xl font-semibold text-gray-800">
                     Looking for inspo? Start here
                 </h3>
                 <div className="flex gap-5">
@@ -82,4 +82,4 @@ const Categories = () => {
     );
 };
 
-export default Categories;
+export default Inspo;

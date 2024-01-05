@@ -13,15 +13,15 @@ const Navbar = ({ homeColor, recommendationsColor, auth }) => {
     return (
         <div className="border-b border-gray-100">
             <div className="mx-auto flex h-[3.5rem] max-w-7xl justify-between text-gray-50">
-                <div className="flex flex-row gap-10">
+                <div className="flex flex-row gap-5">
                     <div className="flex items-center">
-                        <a href="/" className="flex items-center gap-3">
+                        <a href="/" className="flex items-center gap-2">
                             <img
                                 src={savoraGreen}
                                 alt=""
                                 className="w-6 rounded-full"
                             />
-                            <p className="text-lg font-bold text-gray-800 hover:text-darkgreen">
+                            <p className="text-lg font-bold text-darkgreen hover:text-gray-800">
                                 Savora
                             </p>
                         </a>
