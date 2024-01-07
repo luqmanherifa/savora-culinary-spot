@@ -1,17 +1,17 @@
 import Button from "@/Components/Button";
 import React from "react";
-import bakery from "../../../../public/images/bakery.jpg";
-import baksosoto from "../../../../public/images/baksosoto.jpg";
-import beverages from "../../../../public/images/beverages.jpg";
-import coffee from "../../../../public/images/coffee.jpg";
-import fastfood from "../../../../public/images/fastfood.jpg";
-import korean from "../../../../public/images/korean.jpg";
-import martabak from "../../../../public/images/martabak.jpg";
-import noodles from "../../../../public/images/noodles.jpg";
-import pizzapasta from "../../../../public/images/pizzapasta.jpg";
-import seafood from "../../../../public/images/seafood.jpg";
-import snacks from "../../../../public/images/snacks.jpg";
-import western from "../../../../public/images/western.jpg";
+import bakery from "../../../../public/images/cuisinebakery.jpg";
+import baksosoto from "../../../../public/images/cuisinebaksosoto.jpg";
+import beverages from "../../../../public/images/cuisinebeverages.jpg";
+import coffee from "../../../../public/images/cuisinecoffee.jpg";
+import fastfood from "../../../../public/images/cuisinefastfood.jpg";
+import korean from "../../../../public/images/cuisinekorean.jpg";
+import martabak from "../../../../public/images/cuisinemartabak.jpg";
+import noodles from "../../../../public/images/cuisinenoodles.jpg";
+import pizzapasta from "../../../../public/images/cuisinepizzapasta.jpg";
+import seafood from "../../../../public/images/cuisineseafood.jpg";
+import snacks from "../../../../public/images/cuisinesnacks.jpg";
+import western from "../../../../public/images/cuisinewestern.jpg";
 
 const Cuisine = () => {
     return (
@@ -20,7 +20,7 @@ const Cuisine = () => {
                 <h3 className="mb-7 flex justify-center text-2xl font-semibold text-gray-800">
                     Choose from cuisines
                 </h3>
-                <div className="flex max-w-[67rem] flex-wrap gap-[1.4rem]">
+                <div className="flex max-w-6xl flex-wrap justify-center gap-[1.4rem]">
                     <a href="/coffee">
                         <img
                             className="mx-auto mb-4 w-40 rounded-full"

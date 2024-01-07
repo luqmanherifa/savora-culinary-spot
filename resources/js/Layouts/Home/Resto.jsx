@@ -8,11 +8,11 @@ const Resto = () => {
                 <h3 className="mb-3 flex justify-center text-2xl font-semibold text-gray-800">
                     What’s good to eat around here?
                 </h3>
-                <p className="line-clamp-2font-normal mx-auto mb-7 flex max-w-md justify-center text-center  text-base text-gray-800">
+                <p className="mx-auto mb-7 line-clamp-2 flex max-w-md justify-center text-center text-base  font-normal text-gray-800">
                     Discover our collection of popular dishes, local favorites,
                     and best deals in your neighborhood.
                 </p>
-                <div className="flex max-w-[67rem] flex-wrap gap-6">
+                <div className="flex max-w-6xl flex-wrap justify-center gap-6">
                     <a
                         href="/"
                         className="rounded-2xl border border-gray-300 bg-white p-2 hover:bg-lightgreen"

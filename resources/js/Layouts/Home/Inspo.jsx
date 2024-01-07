@@ -1,10 +1,10 @@
 import React from "react";
-import bestSellers from "../../../../public/images/bestsellers.png";
-import budgetMeal from "../../../../public/images/budgetmeal.png";
-import healthyFood from "../../../../public/images/healthyfood.png";
-import mostLoved from "../../../../public/images/mostloved.png";
-import nearMe from "../../../../public/images/nearme.png";
-import tfHours from "../../../../public/images/tfhours.png";
+import bestSellers from "../../../../public/images/inspobestsellers.png";
+import budgetMeal from "../../../../public/images/inspobudgetmeal.png";
+import healthyFood from "../../../../public/images/inspohealthyfood.png";
+import mostLoved from "../../../../public/images/inspomostloved.png";
+import nearMe from "../../../../public/images/insponearme.png";
+import tfHours from "../../../../public/images/inspotfhours.png";
 
 const Inspo = () => {
     return (
@@ -13,7 +13,7 @@ const Inspo = () => {
                 <h3 className="mb-7 flex justify-center text-2xl font-semibold text-gray-800">
                     Looking for inspo? Start here
                 </h3>
-                <div className="flex max-w-[67rem] flex-wrap gap-5">
+                <div className="flex max-w-6xl flex-wrap justify-center gap-5">
                     <a
                         href="/nearme"
                         className="rounded-2xl border border-gray-300 bg-white p-6 pt-4 hover:bg-lightgreen"
