@@ -1,19 +1,40 @@
-import Button from "@/Components/Button";
-import React from "react";
-import bakery from "../../../../public/images/cuisinebakery.jpg";
-import baksosoto from "../../../../public/images/cuisinebaksosoto.jpg";
-import beverages from "../../../../public/images/cuisinebeverages.jpg";
+import React, { useState } from "react";
 import coffee from "../../../../public/images/cuisinecoffee.jpg";
+import martabak from "../../../../public/images/cuisinemartabak.jpg";
+import baksosoto from "../../../../public/images/cuisinebaksosoto.jpg";
+import snacks from "../../../../public/images/cuisinesnacks.jpg";
+import bakery from "../../../../public/images/cuisinebakery.jpg";
+import beverages from "../../../../public/images/cuisinebeverages.jpg";
+import noodles from "../../../../public/images/cuisinenoodles.jpg";
+import seafood from "../../../../public/images/cuisineseafood.jpg";
 import fastfood from "../../../../public/images/cuisinefastfood.jpg";
 import korean from "../../../../public/images/cuisinekorean.jpg";
-import martabak from "../../../../public/images/cuisinemartabak.jpg";
-import noodles from "../../../../public/images/cuisinenoodles.jpg";
-import pizzapasta from "../../../../public/images/cuisinepizzapasta.jpg";
-import seafood from "../../../../public/images/cuisineseafood.jpg";
-import snacks from "../../../../public/images/cuisinesnacks.jpg";
 import western from "../../../../public/images/cuisinewestern.jpg";
+import pizzapasta from "../../../../public/images/cuisinepizzapasta.jpg";
+
+const cuisineData = [
+    { link: "/coffee", image: coffee, text: "Coffee" },
+    { link: "/martabak", image: martabak, text: "Martabak" },
+    { link: "/baksosoto", image: baksosoto, text: "Bakso & Soto" },
+    { link: "/snacks", image: snacks, text: "Snacks" },
+    { link: "/bakery", image: bakery, text: "Bakery" },
+    { link: "/beverages", image: beverages, text: "Beverages" },
+    { link: "/noodles", image: noodles, text: "Noodles" },
+    { link: "/seafood", image: seafood, text: "Seafood" },
+    { link: "/fastfood", image: fastfood, text: "Fast Food" },
+    { link: "/korean", image: korean, text: "Korean" },
+    { link: "/western", image: western, text: "Western" },
+    { link: "/pizzapasta", image: pizzapasta, text: "Pizza & Pasta" },
+];
 
 const Cuisine = () => {
+    const [showAll, setShowAll] = useState(false);
+
+    const displayedCuisineData = showAll
+        ? cuisineData
+        : cuisineData.slice(0, 6);
+    const buttonText = showAll ? "Show less cuisines" : "Show more cuisines";
+
     return (
         <div className="flex justify-center">
             <div className="mx-auto mt-16 max-w-7xl">
@@ -21,129 +42,26 @@ const Cuisine = () => {
                     Choose from cuisines
                 </h3>
                 <div className="flex max-w-6xl flex-wrap justify-center gap-[1.4rem]">
-                    <a href="/coffee">
-                        <img
-                            className="mx-auto mb-4 w-40 rounded-full"
-                            src={coffee}
-                            alt=""
-                        />
-                        <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Coffee
-                        </p>
-                    </a>
-                    <a href="/martabak">
-                        <img
-                            className="mx-auto mb-4 w-40 rounded-full"
-                            src={martabak}
-                            alt=""
-                        />
-                        <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Martabak
-                        </p>
-                    </a>
-                    <a href="/baksosoto">
-                        <img
-                            className="mx-auto mb-4 w-40 rounded-full"
-                            src={baksosoto}
-                            alt=""
-                        />
-                        <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Bakso & soto
-                        </p>
-                    </a>
-                    <a href="/snacks">
-                        <img
-                            className="mx-auto mb-4 w-40 rounded-full"
-                            src={snacks}
-                            alt=""
-                        />
-                        <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Snacks
-                        </p>
-                    </a>
-                    <a href="/bakery">
-                        <img
-                            className="mx-auto mb-4 w-40 rounded-full"
-                            src={bakery}
-                            alt=""
-                        />
-                        <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Bakery
-                        </p>
-                    </a>
-                    <a href="/beverages">
-                        <img
-                            className="mx-auto mb-4 w-40 rounded-full"
-                            src={beverages}
-                            alt=""
-                        />
-                        <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Beverages
-                        </p>
-                    </a>
-                    <a href="/noodles">
-                        <img
-                            className="mx-auto mb-4 w-40 rounded-full"
-                            src={noodles}
-                            alt=""
-                        />
-                        <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Noodles
-                        </p>
-                    </a>
-                    <a href="/seafood">
-                        <img
-                            className="mx-auto mb-4 w-40 rounded-full"
-                            src={seafood}
-                            alt=""
-                        />
-                        <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Seafood
-                        </p>
-                    </a>
-                    <a href="/fastfood">
-                        <img
-                            className="mx-auto mb-4 w-40 rounded-full"
-                            src={fastfood}
-                            alt=""
-                        />
-                        <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Fast food
-                        </p>
-                    </a>
-                    <a href="/korean">
-                        <img
-                            className="mx-auto mb-4 w-40 rounded-full"
-                            src={korean}
-                            alt=""
-                        />
-                        <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Korean
-                        </p>
-                    </a>
-                    <a href="/western">
-                        <img
-                            className="mx-auto mb-4 w-40 rounded-full"
-                            src={western}
-                            alt=""
-                        />
-                        <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Western
-                        </p>
-                    </a>
-                    <a href="/pizzapasta">
-                        <img
-                            className="mx-auto mb-4 w-40 rounded-full"
-                            src={pizzapasta}
-                            alt=""
-                        />
-                        <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Pizza & pasta
-                        </p>
-                    </a>
+                    {displayedCuisineData.map((item, index) => (
+                        <a key={index} href={item.link}>
+                            <img
+                                className="mx-auto mb-4 w-40 rounded-full"
+                                src={item.image}
+                                alt=""
+                            />
+                            <p className="flex justify-center text-sm font-medium text-gray-800">
+                                {item.text}
+                            </p>
+                        </a>
+                    ))}
                 </div>
                 <div className="mt-7 flex justify-center">
-                    <Button text="Show more cuisines" />
+                    <button
+                        className={`inline-flex cursor-pointer items-center rounded-2xl bg-lightgreen px-5 py-2 text-center text-sm font-medium text-darkgreen hover:bg-lightgreenhover`}
+                        onClick={() => setShowAll(!showAll)}
+                    >
+                        {buttonText}
+                    </button>
                 </div>
             </div>
         </div>

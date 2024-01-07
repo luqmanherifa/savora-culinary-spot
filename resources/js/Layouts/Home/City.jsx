@@ -1,7 +1,23 @@
 import Button from "@/Components/Button";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const City = () => {
+    const [city, setCity] = useState([]);
+
+    useEffect(() => {
+        axios
+            .get("/api/city/all")
+            .then((response) => {
+                setCity(response.data.data);
+            })
+            .catch((error) => {
+                toast(`Terjadi kesalahan: ${error}`, {
+                    type: "error",
+                    theme: "light",
+                });
+            });
+    }, []);
+
     return (
         <div className="flex justify-center">
             <div className="mx-auto mt-16 max-w-7xl">
@@ -9,206 +25,25 @@ const City = () => {
                     Cities with Savora
                 </h3>
                 <div className="flex max-w-6xl flex-wrap justify-center gap-6">
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Jakarta
-                            </p>
+                    {city.length > 0 ? (
+                        city.slice(0, 20).map((item) => (
+                            <a
+                                key={item.id}
+                                href={item.slug_city}
+                                className="rounded-full border border-gray-300 hover:bg-lightgreen"
+                            >
+                                <div className="px-5 py-3">
+                                    <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
+                                        {item.name_city}
+                                    </p>
+                                </div>
+                            </a>
+                        ))
+                    ) : (
+                        <div className="py-4 font-medium text-red-500 lg:text-center">
+                            Data not found.
                         </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Bandung
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Bali
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Surabaya
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Makassar
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Palembang
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Yogyakarta
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Malang
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Makassar
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Palembang
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Yogyakarta
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Malang
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Makassar
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Palembang
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Yogyakarta
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Malang
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Malang
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Malang
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Malang
-                            </p>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                    >
-                        <div className="px-5 py-3">
-                            <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
-                                Malang
-                            </p>
-                        </div>
-                    </a>
+                    )}
                 </div>
                 <div className="mt-7 flex justify-center">
                     <Button text="Show all cities" />

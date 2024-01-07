@@ -12,7 +12,7 @@ const Feature = () => {
                     Why order from Savora?
                 </h3>
                 <div className="flex max-w-6xl flex-wrap justify-center gap-6">
-                    <div className="rounded-2xl bg-purple-200 p-[9px] py-12">
+                    <div className="rounded-2xl border border-purple-200 bg-purple-200 p-2 py-12">
                         <img
                             className="mx-auto w-[14.3rem] rounded-xl object-cover"
                             src={featurePurple}
@@ -24,7 +24,7 @@ const Feature = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="rounded-2xl bg-blue-200 p-[9px] py-12">
+                    <div className="rounded-2xl border border-blue-200 bg-blue-200 p-2 py-12">
                         <img
                             className="mx-auto w-[14.3rem] rounded-xl object-cover"
                             src={featureBlue}
@@ -36,7 +36,7 @@ const Feature = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="rounded-2xl bg-red-200 p-[9px] py-12">
+                    <div className="rounded-2xl border border-red-200 bg-red-200 p-2 py-12">
                         <img
                             className="mx-auto w-[14.3rem] rounded-xl object-cover"
                             src={featureRed}
@@ -48,7 +48,7 @@ const Feature = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="rounded-2xl bg-yellow-200 p-[9px] py-12">
+                    <div className="rounded-2xl border border-yellow-200 bg-yellow-200 p-2 py-12">
                         <img
                             className="mx-auto w-[14.3rem] rounded-xl object-cover"
                             src={featureYellow}

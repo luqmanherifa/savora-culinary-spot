@@ -20,7 +20,7 @@ const Inspo = () => {
                     >
                         <img className="mx-auto w-28" src={nearMe} alt="" />
                         <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Near me
+                            Near Me
                         </p>
                     </a>
                     <a
@@ -33,7 +33,7 @@ const Inspo = () => {
                             alt=""
                         />
                         <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Best sellers
+                            Best Sellers
                         </p>
                     </a>
                     <a
@@ -42,7 +42,7 @@ const Inspo = () => {
                     >
                         <img className="mx-auto w-28" src={budgetMeal} alt="" />
                         <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Budget meal
+                            Budget Meal
                         </p>
                     </a>
                     <a
@@ -51,7 +51,7 @@ const Inspo = () => {
                     >
                         <img className="mx-auto w-28" src={mostLoved} alt="" />
                         <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Most loved
+                            Most Loved
                         </p>
                     </a>
                     <a
@@ -60,7 +60,7 @@ const Inspo = () => {
                     >
                         <img className="mx-auto w-28" src={tfHours} alt="" />
                         <p className="flex justify-center text-sm font-medium text-gray-800">
-                            24 hours
+                            24 Hours
                         </p>
                     </a>
                     <a
@@ -73,7 +73,7 @@ const Inspo = () => {
                             alt=""
                         />
                         <p className="flex justify-center text-sm font-medium text-gray-800">
-                            Healthy food
+                            Healthy Food
                         </p>
                     </a>
                 </div>

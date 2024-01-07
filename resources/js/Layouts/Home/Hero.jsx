@@ -6,7 +6,7 @@ const Hero = () => {
         <div className="relative mx-auto mt-3 max-w-7xl">
             <img src={hero} alt="" />
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center text-white">
-                <div className="mb-3 flex justify-center">
+                <div className="mb-2 flex justify-center">
                     <div className="rounded-full bg-white p-5">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -19,14 +19,14 @@ const Hero = () => {
                         </svg>
                     </div>
                 </div>
-                <h3 className="mb-3 text-3xl font-semibold text-white">
+                <h3 className="mb-1 text-3xl font-semibold text-white">
                     Hungry? Just{" "}
                     <span className="cursor-pointer decoration-darkgreen hover:underline">
                         <a href="/">Savora</a>
                     </span>{" "}
                     it!
                 </h3>
-                <p className="mb-6 w-[30rem] text-base font-light text-white">
+                <p className="mb-5 w-[30rem] text-base font-light text-white">
                     Order your favorite meals here, on our web. As smooth as in
                     the app. Same fast delivery. Countless restos to try.
                 </p>
