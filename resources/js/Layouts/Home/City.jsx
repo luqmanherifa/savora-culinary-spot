@@ -26,14 +26,14 @@ const City = () => {
                 </h3>
                 <div className="flex max-w-6xl flex-wrap justify-center gap-6">
                     {city.length > 0 ? (
-                        city.slice(0, 20).map((item) => (
+                        city.slice(0, 16).map((item) => (
                             <a
                                 key={item.id}
                                 href={item.slug_city}
                                 className="rounded-full border border-gray-300 hover:bg-lightgreen"
                             >
-                                <div className="px-5 py-3">
-                                    <p className="line-clamp-1 w-52 text-lg font-semibold text-darkgreen">
+                                <div className="px-5 py-2">
+                                    <p className="line-clamp-1 w-52 text-center text-sm font-semibold text-darkgreen">
                                         {item.name_city}
                                     </p>
                                 </div>
