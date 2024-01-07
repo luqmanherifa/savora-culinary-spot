@@ -10,7 +10,7 @@ const Button = ({
         <a
             href={link}
             target={target}
-            className={`inline-flex items-center rounded-2xl px-5 py-2 text-center text-sm font-medium ${color}`}
+            className={`inline-flex cursor-pointer items-center rounded-2xl px-5 py-2 text-center text-sm font-medium ${color}`}
         >
             {text}
         </a>

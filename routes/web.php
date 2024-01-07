@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CityController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RestoController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -15,6 +17,12 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/api/resto', [RestoController::class, 'index']);
+Route::get('/api/resto/all', [RestoController::class, 'getAll']);
+
+Route::get('/api/city', [CityController::class, 'index']);
+Route::get('/api/city/all', [CityController::class, 'getAll']);
 
 Route::get('/', function () {
     return Inertia::render('Home', [
