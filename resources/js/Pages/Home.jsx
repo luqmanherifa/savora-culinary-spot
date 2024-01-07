@@ -1,4 +1,7 @@
+import City from "@/Layouts/Home/City";
 import Cuisine from "@/Layouts/Home/Cuisine";
+import Feature from "@/Layouts/Home/Feature";
+import Footer from "@/Layouts/Home/Footer";
 import Hero from "@/Layouts/Home/Hero";
 import Inspo from "@/Layouts/Home/Inspo";
 import Navbar from "@/Layouts/Home/Navbar";
@@ -8,13 +11,16 @@ import React from "react";
 
 const Home = ({ auth }) => {
     return (
-        <div className="mb-52">
+        <div>
             <Head title="Home" />
             <Navbar auth={auth} />
             <Hero />
             <Inspo />
             <Cuisine />
             <Resto />
+            <Feature />
+            <City />
+            <Footer />
         </div>
     );
 };
