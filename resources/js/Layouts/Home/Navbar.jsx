@@ -57,7 +57,7 @@ const Navbar = ({ homeColor, recommendationsColor, auth }) => {
                                 type="text"
                                 id="simple-search"
                                 className="block w-full rounded-full border border-gray-300 bg-gray-50 p-2.5 ps-5 text-sm text-gray-900"
-                                placeholder="Search restaurant..."
+                                placeholder="Search resto..."
                                 required
                             />
                         </div>

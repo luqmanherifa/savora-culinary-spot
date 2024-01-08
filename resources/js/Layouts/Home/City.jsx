@@ -1,4 +1,5 @@
 import Button from "@/Components/Button";
+import CityCard from "@/Components/CityCard";
 import DataNotFound from "@/Components/DataNotFound";
 import TitleHome from "@/Components/TitleHome";
 import React, { useEffect, useState } from "react";
@@ -27,17 +28,12 @@ const City = () => {
                 <div className="mt-7 flex max-w-6xl flex-wrap justify-center gap-6">
                     {city.length > 0 ? (
                         city.slice(0, 16).map((item) => (
-                            <a
-                                key={item.id}
-                                href={item.slug_city}
-                                className="rounded-full border border-gray-300 hover:bg-lightgreen"
-                            >
-                                <div className="px-5 py-2">
-                                    <p className="line-clamp-1 w-52 text-center text-sm font-semibold text-darkgreen">
-                                        {item.name_city}
-                                    </p>
-                                </div>
-                            </a>
+                            <div key={item.id}>
+                                <CityCard
+                                    name_city={item.name_city}
+                                    slug_city={item.slug_city}
+                                />
+                            </div>
                         ))
                     ) : (
                         <DataNotFound />

@@ -12,20 +12,21 @@ import korean from "../../../../public/images/cuisinekorean.jpg";
 import western from "../../../../public/images/cuisinewestern.jpg";
 import pizzapasta from "../../../../public/images/cuisinepizzapasta.jpg";
 import TitleHome from "@/Components/TitleHome";
+import CuisineCard from "@/Components/CuisineCard";
 
 const cuisineData = [
-    { link: "/coffee", image: coffee, text: "Coffee" },
-    { link: "/martabak", image: martabak, text: "Martabak" },
-    { link: "/baksosoto", image: baksosoto, text: "Bakso & Soto" },
-    { link: "/snacks", image: snacks, text: "Snacks" },
-    { link: "/bakery", image: bakery, text: "Bakery" },
-    { link: "/beverages", image: beverages, text: "Beverages" },
-    { link: "/noodles", image: noodles, text: "Noodles" },
-    { link: "/seafood", image: seafood, text: "Seafood" },
-    { link: "/fastfood", image: fastfood, text: "Fast Food" },
-    { link: "/korean", image: korean, text: "Korean" },
-    { link: "/western", image: western, text: "Western" },
-    { link: "/pizzapasta", image: pizzapasta, text: "Pizza & Pasta" },
+    { link: "coffee", image: coffee, text: "Coffee" },
+    { link: "martabak", image: martabak, text: "Martabak" },
+    { link: "baksosoto", image: baksosoto, text: "Bakso & Soto" },
+    { link: "snacks", image: snacks, text: "Snacks" },
+    { link: "bakery", image: bakery, text: "Bakery" },
+    { link: "beverages", image: beverages, text: "Beverages" },
+    { link: "noodles", image: noodles, text: "Noodles" },
+    { link: "seafood", image: seafood, text: "Seafood" },
+    { link: "fastfood", image: fastfood, text: "Fast Food" },
+    { link: "korean", image: korean, text: "Korean" },
+    { link: "western", image: western, text: "Western" },
+    { link: "pizzapasta", image: pizzapasta, text: "Pizza & Pasta" },
 ];
 
 const Cuisine = () => {
@@ -42,16 +43,13 @@ const Cuisine = () => {
                 <TitleHome text="Choose from cuisines" />
                 <div className="mt-7 flex max-w-6xl flex-wrap justify-center gap-[1.4rem]">
                     {displayedCuisineData.map((item, index) => (
-                        <a key={index} href={item.link}>
-                            <img
-                                className="mx-auto mb-4 w-40 rounded-full"
-                                src={item.image}
-                                alt=""
+                        <div key={index}>
+                            <CuisineCard
+                                link={item.link}
+                                image={item.image}
+                                text={item.text}
                             />
-                            <p className="flex justify-center text-sm font-medium text-gray-800">
-                                {item.text}
-                            </p>
-                        </a>
+                        </div>
                     ))}
                 </div>
                 <div className="mt-7 flex justify-center">

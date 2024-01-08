@@ -4,6 +4,7 @@ import featureBlue from "../../../../public/images/featureblue.png";
 import featureRed from "../../../../public/images/featurered.png";
 import featureYellow from "../../../../public/images/featureyellow.png";
 import TitleHome from "@/Components/TitleHome";
+import FeatureCard from "@/Components/FeatureCard";
 
 const featureData = [
     {
@@ -39,22 +40,13 @@ const Feature = () => {
                 <TitleHome text="Why order from Savora?" />
                 <div className="mt-7 flex max-w-6xl flex-wrap justify-center gap-6">
                     {featureData.map((item, index) => (
-                        <div
-                            key={index}
-                            className={`rounded-2xl border p-2 py-12 ${item.css1}`}
-                        >
-                            <img
-                                className="mx-auto w-[14.3rem] rounded-xl object-cover"
-                                src={item.image}
-                                alt=""
+                        <div key={index}>
+                            <FeatureCard
+                                image={item.image}
+                                text={item.text}
+                                css1={item.css1}
+                                css2={item.css2}
                             />
-                            <div className="p-3">
-                                <p
-                                    className={`w-52 text-2xl font-semibold ${item.css2}`}
-                                >
-                                    {item.text}
-                                </p>
-                            </div>
                         </div>
                     ))}
                 </div>
