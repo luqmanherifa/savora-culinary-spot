@@ -1,6 +1,6 @@
 import Button from "@/Components/Button";
 import React, { useEffect, useState } from "react";
-import nullImage from "../../../../public/images/null.png";
+import nullImg from "../../../../public/images/null.png";
 import TitleHome from "@/Components/TitleHome";
 import DataNotFound from "@/Components/DataNotFound";
 import RestoCard from "@/Components/RestoCard";
@@ -43,7 +43,7 @@ const Resto = () => {
                                     regency_resto={item.regency_resto}
                                     city_resto={item.city_resto}
                                     star_resto={item.star_resto}
-                                    nullImage={nullImage}
+                                    nullImg={nullImg}
                                 />
                             </div>
                         ))
@@ -52,7 +52,7 @@ const Resto = () => {
                     )}
                 </div>
                 <div className="mt-7 flex justify-center">
-                    <Button text="Show all restos" />
+                    <Button link="/resto" text="Show all restos" />
                 </div>
             </div>
         </div>

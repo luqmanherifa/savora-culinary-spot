@@ -9,14 +9,14 @@ const RestoCard = ({
     regency_resto,
     city_resto,
     star_resto,
-    nullImage,
+    nullImg,
 }) => {
     return (
         <a href={`/resto/${slug_resto}`}>
             <div className="rounded-2xl border border-gray-300 bg-white p-2 hover:bg-lightgreen">
                 <img
                     className="mx-auto h-48 w-[14.3rem] rounded-xl object-cover"
-                    src={nullImage}
+                    src={nullImg}
                     alt=""
                 />
                 <div className="flex flex-col gap-1 p-3 text-sm">
