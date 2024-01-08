@@ -1,6 +1,8 @@
 import Button from "@/Components/Button";
 import React, { useEffect, useState } from "react";
 import nullImage from "../../../../public/images/null.png";
+import TitleHome from "@/Components/TitleHome";
+import DataNotFound from "@/Components/DataNotFound";
 
 const Resto = () => {
     const [resto, setResto] = useState([]);
@@ -22,14 +24,12 @@ const Resto = () => {
     return (
         <div className="flex justify-center">
             <div className="mx-auto mt-16 max-w-7xl">
-                <h3 className="mb-3 flex justify-center text-2xl font-semibold text-gray-800">
-                    What’s good to eat around here?
-                </h3>
-                <p className="mx-auto mb-7 line-clamp-2 flex max-w-md justify-center text-center text-base  font-normal text-gray-800">
+                <TitleHome text="What’s good to eat around here?" />
+                <p className="mx-auto mt-2 line-clamp-2 flex max-w-md justify-center text-center text-base  font-normal text-gray-800">
                     Discover our collection of popular dishes, local favorites,
                     and best deals in your neighborhood.
                 </p>
-                <div className="flex max-w-6xl flex-wrap justify-center gap-6">
+                <div className="mt-7 flex max-w-6xl flex-wrap justify-center gap-6">
                     {resto.length > 0 ? (
                         resto.slice(0, 8).map((item) => (
                             <a
@@ -93,9 +93,7 @@ const Resto = () => {
                             </a>
                         ))
                     ) : (
-                        <div className="py-4 font-medium text-red-500 lg:text-center">
-                            Data not found.
-                        </div>
+                        <DataNotFound />
                     )}
                 </div>
                 <div className="mt-7 flex justify-center">

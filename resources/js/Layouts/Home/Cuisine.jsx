@@ -11,6 +11,7 @@ import fastfood from "../../../../public/images/cuisinefastfood.jpg";
 import korean from "../../../../public/images/cuisinekorean.jpg";
 import western from "../../../../public/images/cuisinewestern.jpg";
 import pizzapasta from "../../../../public/images/cuisinepizzapasta.jpg";
+import TitleHome from "@/Components/TitleHome";
 
 const cuisineData = [
     { link: "/coffee", image: coffee, text: "Coffee" },
@@ -38,10 +39,8 @@ const Cuisine = () => {
     return (
         <div className="flex justify-center">
             <div className="mx-auto mt-16 max-w-7xl">
-                <h3 className="mb-7 flex justify-center text-2xl font-semibold text-gray-800">
-                    Choose from cuisines
-                </h3>
-                <div className="flex max-w-6xl flex-wrap justify-center gap-[1.4rem]">
+                <TitleHome text="Choose from cuisines" />
+                <div className="mt-7 flex max-w-6xl flex-wrap justify-center gap-[1.4rem]">
                     {displayedCuisineData.map((item, index) => (
                         <a key={index} href={item.link}>
                             <img
