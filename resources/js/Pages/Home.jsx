@@ -13,7 +13,7 @@ const Home = ({ auth }) => {
     return (
         <div>
             <Head title="Home" />
-            <Navbar auth={auth} />
+            <Navbar auth={auth} homeColor="text-red-600" />
             <Hero />
             <Inspo />
             <Cuisine />

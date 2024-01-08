@@ -40,7 +40,7 @@ const City = () => {
                     )}
                 </div>
                 <div className="mt-7 flex justify-center">
-                    <Button text="Show all cities" />
+                    <Button link="/city" text="Show all cities" />
                 </div>
             </div>
         </div>

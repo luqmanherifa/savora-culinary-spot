@@ -18,12 +18,6 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/api/resto', [RestoController::class, 'index']);
-Route::get('/api/resto/all', [RestoController::class, 'getAll']);
-
-Route::get('/api/city', [CityController::class, 'index']);
-Route::get('/api/city/all', [CityController::class, 'getAll']);
-
 Route::get('/', function () {
     return Inertia::render('Home', [
         'canLogin' => Route::has('login'),
@@ -41,6 +35,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+Route::get('/api/resto', [RestoController::class, 'index']);
+Route::get('/api/resto/all', [RestoController::class, 'getAll']);
+
+Route::get('/api/city', [CityController::class, 'index']);
+Route::get('/api/city/all', [CityController::class, 'getAll']);
+
+Route::get('/resto', function () {
+    return Inertia::render('RestoPages');
 });
 
 require __DIR__ . '/auth.php';

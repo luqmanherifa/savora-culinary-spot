@@ -3,7 +3,7 @@ import { Link } from "@inertiajs/inertia-react";
 import React, { useState } from "react";
 import savoraGreen from "../../../../public/images/savoragreen.png";
 
-const Navbar = ({ homeColor, recommendationsColor, auth }) => {
+const Navbar = ({ homeColor, restoColor, auth }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const toggleDropdown = () => {
@@ -38,10 +38,10 @@ const Navbar = ({ homeColor, recommendationsColor, auth }) => {
                         </div>
                         <div>
                             <a
-                                href="/recommendations"
-                                className={`text-left text-sm font-semibold text-gray-700 hover:text-red-600 ${recommendationsColor}`}
+                                href="/resto"
+                                className={`text-left text-sm font-semibold text-gray-700 hover:text-red-600 ${restoColor}`}
                             >
-                                Recommendations
+                                Resto
                             </a>
                         </div>
                     </nav>
@@ -91,7 +91,7 @@ const Navbar = ({ homeColor, recommendationsColor, auth }) => {
                                     <button
                                         id="dropdownInformationButton"
                                         data-dropdown-toggle="dropdownInformation"
-                                        className="inline-flex items-center rounded-2xl bg-lightgreen px-5 py-2.5 text-center text-sm font-medium text-darkgreen hover:bg-lightgreenhover"
+                                        className="inline-flex items-center rounded-2xl bg-darkgreen px-5 py-2.5 text-center text-sm font-medium text-lightgreen hover:bg-darkgreenhover"
                                         type="button"
                                         onClick={toggleDropdown}
                                     >
@@ -156,7 +156,7 @@ const Navbar = ({ homeColor, recommendationsColor, auth }) => {
                             </div>
                         ) : (
                             <div className="flex items-center">
-                                <Button text="Log in/Sign up" link="/login" />
+                                <Button link="/login" text="Log in/Sign up" />
                             </div>
                         )}
                     </div>
