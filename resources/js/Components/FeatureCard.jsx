@@ -6,7 +6,7 @@ const FeatureCard = ({ image, text, css1, css2 }) => {
             <img
                 className="mx-auto w-[14.3rem] rounded-xl object-cover"
                 src={image}
-                alt=""
+                alt="image"
             />
             <div className="p-3">
                 <p className={`w-52 text-2xl font-semibold ${css2}`}>{text}</p>

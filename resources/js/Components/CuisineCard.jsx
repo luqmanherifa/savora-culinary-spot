@@ -7,7 +7,7 @@ const CuisineCard = ({ link, image, text }) => {
                 <img
                     className="mx-auto mb-4 w-40 rounded-full"
                     src={image}
-                    alt=""
+                    alt="image"
                 />
                 <p className="flex justify-center text-sm font-medium text-gray-800">
                     {text}

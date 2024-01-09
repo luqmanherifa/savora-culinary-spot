@@ -15,7 +15,7 @@ class CityController extends Controller
 
     public function getAll()
     {
-        $city = City::latest('id')->paginate(16);
+        $city = City::latest('id')->paginate(40);
         return response()->json($city);
     }
 

@@ -15,7 +15,7 @@ class RestoController extends Controller
 
     public function getAll()
     {
-        $resto = Resto::latest('id')->paginate(8);
+        $resto = Resto::latest('id')->paginate(20);
         return response()->json($resto);
     }
 

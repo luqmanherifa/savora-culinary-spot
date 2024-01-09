@@ -18,7 +18,7 @@ const Navbar = ({ homeColor, restoColor, auth }) => {
                         <a href="/" className="flex items-center gap-2">
                             <img
                                 src={savoraGreen}
-                                alt=""
+                                alt="image"
                                 className="w-6 rounded-full"
                             />
                             <p className="text-lg font-bold text-darkgreen hover:text-gray-800">
@@ -56,7 +56,7 @@ const Navbar = ({ homeColor, restoColor, auth }) => {
                             <input
                                 type="text"
                                 id="simple-search"
-                                className="block w-full rounded-full border border-gray-300 bg-gray-50 p-2.5 ps-5 text-sm text-gray-900"
+                                className="block w-full rounded-full border border-gray-300 bg-gray-50 p-2.5 py-2 ps-5 text-sm text-gray-900"
                                 placeholder="Search resto..."
                                 required
                             />

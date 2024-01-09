@@ -11,7 +11,7 @@ const Footer = () => {
                             <img
                                 src={savoraRed}
                                 className="mr-3 h-8 w-8 rounded-full"
-                                alt=""
+                                alt="image"
                             />
                             <span className="font-bricolage self-center whitespace-nowrap text-xl font-bold text-white hover:underline">
                                 Savora

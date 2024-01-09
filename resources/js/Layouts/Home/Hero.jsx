@@ -4,7 +4,7 @@ import hero from "../../../../public/images/hero.jpg";
 const Hero = () => {
     return (
         <div className="relative mx-auto mt-3 max-w-7xl">
-            <img src={hero} alt="" />
+            <img src={hero} alt="image" />
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center text-white">
                 <div className="mb-2 flex justify-center">
                     <div className="rounded-full bg-white p-5">
