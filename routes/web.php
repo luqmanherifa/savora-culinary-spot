@@ -3,6 +3,8 @@
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RestoController;
+use App\Models\City;
+use App\Models\Resto;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -39,12 +41,38 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/api/resto', [RestoController::class, 'index']);
 Route::get('/api/resto/all', [RestoController::class, 'getAll']);
+Route::get('/api/resto/{slug_resto}', [RestoController::class, 'detail']);
 
 Route::get('/api/city', [CityController::class, 'index']);
 Route::get('/api/city/all', [CityController::class, 'getAll']);
+Route::get('/api/city/{slug_city}', [CityController::class, 'detail']);
 
 Route::get('/resto', function () {
     return Inertia::render('RestoPages');
+});
+
+Route::get('/resto/{slug_resto}', function ($slug_resto) {
+    $resto = Resto::where('slug_resto', $slug_resto)->first();
+
+    if ($resto) {
+        return Inertia::render('RestoDetail', ['slug_resto' => $slug_resto]);
+    } else {
+        return Inertia::render('NotFound');
+    }
+});
+
+Route::get('/city', function () {
+    return Inertia::render('CityPages');
+});
+
+Route::get('/city/{slug_city}', function ($slug_city) {
+    $city = City::where('slug_city', $slug_city)->first();
+
+    if ($city) {
+        return Inertia::render('CityDetail', ['slug_city' => $slug_city]);
+    } else {
+        return Inertia::render('NotFound');
+    }
 });
 
 require __DIR__ . '/auth.php';
