@@ -7,7 +7,8 @@ import { Head } from "@inertiajs/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import nullImg from "../../../public/images/null.png";
-import restoImg from "../../../public/images/resto.png";
+import restoImg from "../../../public/images/pagesresto.png";
+import { toast } from "react-toastify";
 
 const RestoPages = ({ auth }) => {
     const [resto, setResto] = useState([]);
@@ -64,8 +65,8 @@ const RestoPages = ({ auth }) => {
         <div>
             <Head title="Resto" />
             <Navbar auth={auth} restoColor="text-red-600" />
-            <img src={restoImg} alt="" />
-            <div className="mx-auto mt-8 min-h-screen max-w-xs lg:mt-8 lg:max-w-7xl">
+            <img src={restoImg} alt="image" className="w-full" />
+            <div className="mx-auto mt-8 min-h-screen max-w-7xl">
                 <div className="mb-3 mt-7">
                     <div className="flex justify-center">
                         <div className="mx-auto max-w-7xl">
@@ -74,7 +75,7 @@ const RestoPages = ({ auth }) => {
                             </h3>
                             <div className="flex max-w-6xl flex-wrap justify-center gap-6">
                                 {resto.length > 0 ? (
-                                    resto.slice(0, 8).map((item) => (
+                                    resto.map((item) => (
                                         <div key={item.id}>
                                             <RestoCard
                                                 name_resto={item.name_resto}
